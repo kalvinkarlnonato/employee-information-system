@@ -71,18 +71,18 @@
             // ToogleDarkModeButton
             // 
             this.ToogleDarkModeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ToogleDarkModeButton.BackColor = System.Drawing.Color.White;
+            this.ToogleDarkModeButton.BackColor = System.Drawing.Color.Transparent;
             this.ToogleDarkModeButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.ToogleDarkModeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.ToogleDarkModeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.ToogleDarkModeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ToogleDarkModeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ToogleDarkModeButton.Font = new System.Drawing.Font("Nunito Sans Normal", 6F);
             this.ToogleDarkModeButton.IconChar = FontAwesome.Sharp.IconChar.ToggleOn;
             this.ToogleDarkModeButton.IconColor = System.Drawing.Color.Black;
             this.ToogleDarkModeButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ToogleDarkModeButton.IconSize = 20;
             this.ToogleDarkModeButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ToogleDarkModeButton.Location = new System.Drawing.Point(1284, 0);
+            this.ToogleDarkModeButton.Location = new System.Drawing.Point(1284, 1);
             this.ToogleDarkModeButton.Margin = new System.Windows.Forms.Padding(4);
             this.ToogleDarkModeButton.Name = "ToogleDarkModeButton";
             this.ToogleDarkModeButton.Size = new System.Drawing.Size(94, 27);
@@ -208,6 +208,7 @@
             this.LogoutButton.Text = "LOG-OUT";
             this.LogoutButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.LogoutButton.UseVisualStyleBackColor = true;
+            this.LogoutButton.Click += new System.EventHandler(this.LogoutButton_Click);
             // 
             // TitleLabel
             // 

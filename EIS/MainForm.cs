@@ -11,6 +11,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EIS.Forms;
 using FontAwesome.Sharp;
 using Library;
 
@@ -80,7 +81,7 @@ namespace EIS
         }
         private void ChangeToRoudedProfile()
         {
-            System.Drawing.Drawing2D.GraphicsPath obj = new System.Drawing.Drawing2D.GraphicsPath(); ;
+            GraphicsPath obj = new GraphicsPath(); ;
             obj.AddEllipse(0, 0, ProfilePicture.Width, ProfilePicture.Height);
             Region rg = new Region(obj);
             ProfilePicture.Region = rg;
@@ -141,10 +142,9 @@ namespace EIS
             GlobalConfiguration.UseImmersiveDarkMode(Handle, isDark);
             if (isDark)
             {
-                //this.BackColor = Color.FromArgb(31, 31, 31);
-                this.BackColor = Color.Black;
+                this.BackColor = Color.FromArgb(31, 31, 31);
+                //this.BackColor = Color.Black;
                 this.ToogleDarkModeButton.IconChar = FontAwesome.Sharp.IconChar.ToggleOn;
-                this.ToogleDarkModeButton.BackColor = Color.Black;
                 this.ToogleDarkModeButton.IconColor = Color.White;
                 this.ToogleDarkModeButton.ForeColor = Color.White;
                 this.TitleLabel.ForeColor = Color.White;
@@ -160,7 +160,6 @@ namespace EIS
             {
                 this.BackColor = Color.White;
                 this.ToogleDarkModeButton.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
-                this.ToogleDarkModeButton.BackColor = Color.White;
                 this.ToogleDarkModeButton.IconColor = Color.Black;
                 this.ToogleDarkModeButton.ForeColor = Color.Black;
                 this.TitleLabel.ForeColor = Color.Black;
@@ -272,27 +271,38 @@ namespace EIS
             MainPanel.Controls.Add(childForm);
             MainPanel.Tag = childForm;
             childForm.BringToFront();
+            childForm.BackColor = Color.White;
+            if(GlobalConfiguration.IsDark) childForm.BackColor = Color.FromArgb(31, 31, 31);
             childForm.Show();
             TitleLabel.Text = childForm.Text;
         }
         private void HomeButton_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color1);
+            OpenChildForm(new HomeForm());
         }
 
         private void ManageButton_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
+            OpenChildForm(new ManageEmployeesForm());
         }
 
         private void ReportsButton_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color3);
+            OpenChildForm(new ReportsForm());
         }
 
         private void LibraryButton_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color4);
+            OpenChildForm(new LibraryForm());
+        }
+
+        private void LogoutButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This functionality will be added soon. Please contact the administrator for more queries.","Maintenance",MessageBoxButtons.OK,MessageBoxIcon.Information);
         }
     }
 }
