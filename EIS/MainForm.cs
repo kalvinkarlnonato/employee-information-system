@@ -62,8 +62,8 @@ namespace EIS
                 leftBorderButton.Visible = true;
                 leftBorderButton.BringToFront();
                 //Icon current child form
-                currentChildIcon.IconChar = currentButton.IconChar;
-                currentChildIcon.IconColor = color;
+                TitleIconPictureBox.IconChar = currentButton.IconChar;
+                TitleIconPictureBox.IconColor = color;
             }
         }
         //Function
@@ -147,6 +147,7 @@ namespace EIS
                 this.ToogleDarkModeButton.IconChar = FontAwesome.Sharp.IconChar.ToggleOn;
                 this.ToogleDarkModeButton.IconColor = Color.White;
                 this.ToogleDarkModeButton.ForeColor = Color.White;
+                this.TitleIconPictureBox.IconColor = Color.White;
                 this.TitleLabel.ForeColor = Color.White;
                 this.HomeButton.ForeColor = Color.White;
                 this.ManageButton.ForeColor = Color.White;
@@ -162,6 +163,7 @@ namespace EIS
                 this.ToogleDarkModeButton.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
                 this.ToogleDarkModeButton.IconColor = Color.Black;
                 this.ToogleDarkModeButton.ForeColor = Color.Black;
+                this.TitleIconPictureBox.IconColor = Color.Black;
                 this.TitleLabel.ForeColor = Color.Black;
                 this.HomeButton.ForeColor = Color.Black;
                 this.ManageButton.ForeColor = Color.Black;

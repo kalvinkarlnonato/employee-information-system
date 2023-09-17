@@ -46,13 +46,13 @@
             this.DateTimeStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.DateTimeStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.TimeTimer = new System.Windows.Forms.Timer(this.components);
-            this.currentChildIcon = new FontAwesome.Sharp.IconPictureBox();
+            this.TitleIconPictureBox = new FontAwesome.Sharp.IconPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.SpinningLogoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePictureBox)).BeginInit();
             this.MainGroupBox.SuspendLayout();
             this.MainStatusStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.currentChildIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TitleIconPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // SpinningLogoPictureBox
@@ -120,7 +120,7 @@
             this.HomeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.HomeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.HomeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.HomeButton.IconChar = FontAwesome.Sharp.IconChar.House;
+            this.HomeButton.IconChar = FontAwesome.Sharp.IconChar.HomeLg;
             this.HomeButton.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(216)))), ((int)(((byte)(59)))));
             this.HomeButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.HomeButton.IconSize = 30;
@@ -215,9 +215,9 @@
             this.TitleLabel.AutoSize = true;
             this.TitleLabel.Location = new System.Drawing.Point(193, 9);
             this.TitleLabel.Name = "TitleLabel";
-            this.TitleLabel.Size = new System.Drawing.Size(43, 17);
+            this.TitleLabel.Size = new System.Drawing.Size(272, 17);
             this.TitleLabel.TabIndex = 106;
-            this.TitleLabel.Text = "HOME";
+            this.TitleLabel.Text = "Welcome to Employee Information System v1.0.0";
             // 
             // MainGroupBox
             // 
@@ -269,19 +269,19 @@
             this.TimeTimer.Enabled = true;
             this.TimeTimer.Tick += new System.EventHandler(this.TimeTimer_Tick);
             // 
-            // currentChildIcon
+            // TitleIconPictureBox
             // 
-            this.currentChildIcon.BackColor = System.Drawing.Color.Transparent;
-            this.currentChildIcon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(216)))), ((int)(((byte)(59)))));
-            this.currentChildIcon.IconChar = FontAwesome.Sharp.IconChar.HomeLg;
-            this.currentChildIcon.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(216)))), ((int)(((byte)(59)))));
-            this.currentChildIcon.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.currentChildIcon.IconSize = 28;
-            this.currentChildIcon.Location = new System.Drawing.Point(159, 5);
-            this.currentChildIcon.Name = "currentChildIcon";
-            this.currentChildIcon.Size = new System.Drawing.Size(28, 28);
-            this.currentChildIcon.TabIndex = 109;
-            this.currentChildIcon.TabStop = false;
+            this.TitleIconPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.TitleIconPictureBox.ForeColor = System.Drawing.Color.Black;
+            this.TitleIconPictureBox.IconChar = FontAwesome.Sharp.IconChar.Laugh;
+            this.TitleIconPictureBox.IconColor = System.Drawing.Color.Black;
+            this.TitleIconPictureBox.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.TitleIconPictureBox.IconSize = 28;
+            this.TitleIconPictureBox.Location = new System.Drawing.Point(159, 5);
+            this.TitleIconPictureBox.Name = "TitleIconPictureBox";
+            this.TitleIconPictureBox.Size = new System.Drawing.Size(28, 28);
+            this.TitleIconPictureBox.TabIndex = 109;
+            this.TitleIconPictureBox.TabStop = false;
             // 
             // MainForm
             // 
@@ -289,7 +289,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1379, 667);
-            this.Controls.Add(this.currentChildIcon);
+            this.Controls.Add(this.TitleIconPictureBox);
             this.Controls.Add(this.MainStatusStrip);
             this.Controls.Add(this.MainGroupBox);
             this.Controls.Add(this.TitleLabel);
@@ -316,7 +316,7 @@
             this.MainGroupBox.ResumeLayout(false);
             this.MainStatusStrip.ResumeLayout(false);
             this.MainStatusStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.currentChildIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TitleIconPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -339,7 +339,7 @@
         private System.Windows.Forms.ToolStripStatusLabel DateTimeStatusLabel;
         private System.Windows.Forms.ToolStripStatusLabel DateTimeStatus;
         private System.Windows.Forms.Timer TimeTimer;
-        private FontAwesome.Sharp.IconPictureBox currentChildIcon;
+        private FontAwesome.Sharp.IconPictureBox TitleIconPictureBox;
         private System.Windows.Forms.Panel MainPanel;
     }
 }
