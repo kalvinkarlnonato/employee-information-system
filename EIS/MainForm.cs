@@ -26,7 +26,7 @@ namespace EIS
             ChangeToRoudedProfile();
             LoadDefaultProfilePicture();
             leftBorderButton = new Panel();
-            leftBorderButton.Size = new Size(7, 43);
+            leftBorderButton.Size = new Size(7, 44);
             this.Controls.Add(leftBorderButton);
         }
         #region UI Style
