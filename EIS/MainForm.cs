@@ -1,4 +1,5 @@
-﻿using System;
+﻿// Defaults
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,14 +12,15 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+// User defined
+using Library;
 using EIS.Forms;
 using FontAwesome.Sharp;
-using Library;
-
+using ComponentFactory.Krypton.Toolkit;
 
 namespace EIS
 {
-    public partial class MainForm : Form
+    public partial class MainForm : KryptonForm
     {
         public MainForm()
         {
@@ -142,12 +144,17 @@ namespace EIS
             GlobalConfiguration.UseImmersiveDarkMode(Handle, isDark);
             if (isDark)
             {
+                //krypton
+                this.kryptonPalette.FormStyles.FormMain.StateCommon.Back.Color1 = Color.FromArgb(31, 31, 31);
+                this.kryptonPalette.FormStyles.FormMain.StateCommon.Back.Color2 = Color.FromArgb(31, 31, 31);
+                this.kryptonPalette.HeaderStyles.HeaderForm.StateCommon.Back.Color1 = Color.FromArgb(31, 31, 31);
+                this.kryptonPalette.HeaderStyles.HeaderForm.StateCommon.Back.Color2 = Color.FromArgb(31, 31, 31);
+                this.kryptonPalette.HeaderStyles.HeaderForm.StateCommon.Content.ShortText.Color1 = Color.White;
+                //others
                 this.BackColor = Color.FromArgb(31, 31, 31);
-                //this.BackColor = Color.Black;
                 this.ToogleDarkModeButton.IconChar = FontAwesome.Sharp.IconChar.ToggleOn;
                 this.ToogleDarkModeButton.IconColor = Color.White;
                 this.ToogleDarkModeButton.ForeColor = Color.White;
-                this.TitleIconPictureBox.IconColor = Color.White;
                 this.TitleLabel.ForeColor = Color.White;
                 this.HomeButton.ForeColor = Color.White;
                 this.ManageButton.ForeColor = Color.White;
@@ -159,11 +166,17 @@ namespace EIS
             }
             else
             {
+                //krypton
+                this.kryptonPalette.FormStyles.FormMain.StateCommon.Back.Color1 = Color.White;
+                this.kryptonPalette.FormStyles.FormMain.StateCommon.Back.Color2 = Color.White;
+                this.kryptonPalette.HeaderStyles.HeaderForm.StateCommon.Back.Color1 = Color.White;
+                this.kryptonPalette.HeaderStyles.HeaderForm.StateCommon.Back.Color2 = Color.White;
+                this.kryptonPalette.HeaderStyles.HeaderForm.StateCommon.Content.ShortText.Color1 = Color.DimGray;
+                //others
                 this.BackColor = Color.White;
                 this.ToogleDarkModeButton.IconChar = FontAwesome.Sharp.IconChar.ToggleOff;
                 this.ToogleDarkModeButton.IconColor = Color.Black;
                 this.ToogleDarkModeButton.ForeColor = Color.Black;
-                this.TitleIconPictureBox.IconColor = Color.Black;
                 this.TitleLabel.ForeColor = Color.Black;
                 this.HomeButton.ForeColor = Color.Black;
                 this.ManageButton.ForeColor = Color.Black;
@@ -172,16 +185,6 @@ namespace EIS
                 this.LogoutButton.ForeColor = Color.Black;
                 this.DateTimeStatusLabel.ForeColor = Color.Black;
                 this.DateTimeStatus.ForeColor = Color.Black;
-            }
-            if (this.WindowState == FormWindowState.Maximized)
-            {
-                this.WindowState = FormWindowState.Normal;
-                this.WindowState = FormWindowState.Maximized;
-            }
-            else
-            {
-                this.WindowState = FormWindowState.Maximized;
-                this.WindowState = FormWindowState.Normal;
             }
             this.Refresh();
         }

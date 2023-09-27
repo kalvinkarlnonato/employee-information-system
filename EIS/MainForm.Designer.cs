@@ -45,8 +45,10 @@
             this.MainStatusStrip = new System.Windows.Forms.StatusStrip();
             this.DateTimeStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.DateTimeStatus = new System.Windows.Forms.ToolStripStatusLabel();
+            this.DeveloperStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.TimeTimer = new System.Windows.Forms.Timer(this.components);
             this.TitleIconPictureBox = new FontAwesome.Sharp.IconPictureBox();
+            this.kryptonPalette = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.SpinningLogoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePictureBox)).BeginInit();
@@ -76,16 +78,16 @@
             this.ToogleDarkModeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.ToogleDarkModeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.ToogleDarkModeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ToogleDarkModeButton.Font = new System.Drawing.Font("Nunito Sans Normal", 6F);
+            this.ToogleDarkModeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F);
             this.ToogleDarkModeButton.IconChar = FontAwesome.Sharp.IconChar.ToggleOn;
             this.ToogleDarkModeButton.IconColor = System.Drawing.Color.Black;
             this.ToogleDarkModeButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ToogleDarkModeButton.IconSize = 20;
             this.ToogleDarkModeButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ToogleDarkModeButton.Location = new System.Drawing.Point(1284, 1);
+            this.ToogleDarkModeButton.Location = new System.Drawing.Point(1269, 1);
             this.ToogleDarkModeButton.Margin = new System.Windows.Forms.Padding(4);
             this.ToogleDarkModeButton.Name = "ToogleDarkModeButton";
-            this.ToogleDarkModeButton.Size = new System.Drawing.Size(94, 27);
+            this.ToogleDarkModeButton.Size = new System.Drawing.Size(109, 27);
             this.ToogleDarkModeButton.TabIndex = 0;
             this.ToogleDarkModeButton.Text = "DARK MODE";
             this.ToogleDarkModeButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -215,9 +217,9 @@
             this.TitleLabel.AutoSize = true;
             this.TitleLabel.Location = new System.Drawing.Point(193, 9);
             this.TitleLabel.Name = "TitleLabel";
-            this.TitleLabel.Size = new System.Drawing.Size(272, 17);
+            this.TitleLabel.Size = new System.Drawing.Size(41, 15);
             this.TitleLabel.TabIndex = 106;
-            this.TitleLabel.Text = "Welcome to Employee Information System v1.0.0";
+            this.TitleLabel.Text = "Home";
             // 
             // MainGroupBox
             // 
@@ -234,18 +236,20 @@
             // MainPanel
             // 
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainPanel.Location = new System.Drawing.Point(3, 20);
+            this.MainPanel.Location = new System.Drawing.Point(3, 17);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(1202, 589);
+            this.MainPanel.Size = new System.Drawing.Size(1202, 592);
             this.MainPanel.TabIndex = 0;
             // 
             // MainStatusStrip
             // 
             this.MainStatusStrip.BackColor = System.Drawing.Color.Transparent;
-            this.MainStatusStrip.Font = new System.Drawing.Font("Nunito Sans Normal", 9F);
+            this.MainStatusStrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.MainStatusStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.MainStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.DateTimeStatusLabel,
-            this.DateTimeStatus});
+            this.DateTimeStatus,
+            this.DeveloperStatus});
             this.MainStatusStrip.Location = new System.Drawing.Point(0, 645);
             this.MainStatusStrip.Name = "MainStatusStrip";
             this.MainStatusStrip.Size = new System.Drawing.Size(1379, 22);
@@ -261,8 +265,14 @@
             // DateTimeStatus
             // 
             this.DateTimeStatus.Name = "DateTimeStatus";
-            this.DateTimeStatus.Size = new System.Drawing.Size(66, 17);
+            this.DateTimeStatus.Size = new System.Drawing.Size(69, 17);
             this.DateTimeStatus.Text = "HH:MM:SS";
+            // 
+            // DeveloperStatus
+            // 
+            this.DeveloperStatus.Name = "DeveloperStatus";
+            this.DeveloperStatus.Size = new System.Drawing.Size(222, 17);
+            this.DeveloperStatus.Text = "Made with love by Kalvin Karl C. Nonato";
             // 
             // TimeTimer
             // 
@@ -272,9 +282,9 @@
             // TitleIconPictureBox
             // 
             this.TitleIconPictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.TitleIconPictureBox.ForeColor = System.Drawing.Color.Black;
-            this.TitleIconPictureBox.IconChar = FontAwesome.Sharp.IconChar.Laugh;
-            this.TitleIconPictureBox.IconColor = System.Drawing.Color.Black;
+            this.TitleIconPictureBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(216)))), ((int)(((byte)(59)))));
+            this.TitleIconPictureBox.IconChar = FontAwesome.Sharp.IconChar.HomeLg;
+            this.TitleIconPictureBox.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(216)))), ((int)(((byte)(59)))));
             this.TitleIconPictureBox.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.TitleIconPictureBox.IconSize = 28;
             this.TitleIconPictureBox.Location = new System.Drawing.Point(159, 5);
@@ -283,9 +293,29 @@
             this.TitleIconPictureBox.TabIndex = 109;
             this.TitleIconPictureBox.TabStop = false;
             // 
+            // kryptonPalette
+            // 
+            this.kryptonPalette.BasePaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Global;
+            this.kryptonPalette.ButtonSpecs.FormClose.Image = ((System.Drawing.Image)(resources.GetObject("kryptonPalette.ButtonSpecs.FormClose.Image")));
+            this.kryptonPalette.ButtonSpecs.FormMax.Image = ((System.Drawing.Image)(resources.GetObject("kryptonPalette.ButtonSpecs.FormMax.Image")));
+            this.kryptonPalette.ButtonSpecs.FormMin.Image = ((System.Drawing.Image)(resources.GetObject("kryptonPalette.ButtonSpecs.FormMin.Image")));
+            this.kryptonPalette.ButtonSpecs.FormRestore.Image = ((System.Drawing.Image)(resources.GetObject("kryptonPalette.ButtonSpecs.FormRestore.Image")));
+            this.kryptonPalette.ButtonStyles.ButtonForm.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonPalette.FormStyles.FormMain.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonPalette.FormStyles.FormMain.StateCommon.Border.Rounding = 12;
+            this.kryptonPalette.HeaderStyles.HeaderForm.StateCommon.ButtonEdgeInset = 0;
+            this.kryptonPalette.HeaderStyles.HeaderForm.StateCommon.ButtonPadding = new System.Windows.Forms.Padding(0, 0, 8, 0);
+            this.kryptonPalette.HeaderStyles.HeaderForm.StateCommon.Content.Padding = new System.Windows.Forms.Padding(8, -1, -1, -1);
+            this.kryptonPalette.HeaderStyles.HeaderForm.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.DimGray;
+            this.kryptonPalette.HeaderStyles.HeaderForm.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Nunito", 12F);
+            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1379, 667);
@@ -302,12 +332,15 @@
             this.Controls.Add(this.ToogleDarkModeButton);
             this.Controls.Add(this.ProfilePicture);
             this.Controls.Add(this.ProfilePictureBox);
-            this.Font = new System.Drawing.Font("Nunito Sans Normal", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1000, 500);
             this.Name = "MainForm";
-            this.Text = "Admin | Employee Information System v1.0.0";
+            this.Palette = this.kryptonPalette;
+            this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.ShowIcon = false;
+            this.Text = "Employee Information Management System v1.0.0";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.SpinningLogoPictureBox)).EndInit();
@@ -341,6 +374,8 @@
         private System.Windows.Forms.Timer TimeTimer;
         private FontAwesome.Sharp.IconPictureBox TitleIconPictureBox;
         private System.Windows.Forms.Panel MainPanel;
+        private ComponentFactory.Krypton.Toolkit.KryptonPalette kryptonPalette;
+        private System.Windows.Forms.ToolStripStatusLabel DeveloperStatus;
     }
 }
 
